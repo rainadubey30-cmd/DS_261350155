@@ -1,0 +1,204 @@
+Program 1:
+Write a program to check whether a given number is
+Positive, Negative or Zero.
+"""
+
+# Taking input from the user
+num = int(input("Enter a number: "))
+
+# Checking the value of the number
+if num > 0:
+    print("Positive")
+elif num < 0:
+    print("Negative")
+else:
+    print("Zero")
+
+
+
+"""
+Program 2:
+Write a program to check whether a given number
+is Odd or Even.
+"""
+
+# Taking input
+num = int(input("Enter a number: "))
+
+# Using modulus operator to check divisibility by 2
+if num % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
+
+
+
+
+"""
+Program 3:
+Given two non-negative integers,
+print True if they have the same last digit,
+otherwise print False.
+"""
+
+# Taking input
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+
+# Finding last digit using modulus operator
+last_digit1 = num1 % 10
+last_digit2 = num2 % 10
+
+# Comparing last digits
+if last_digit1 == last_digit2:
+    print(True)
+else:
+    print(False)
+
+
+
+"""
+Program 4:
+Print numbers from 1 to 10 in a single row
+with one tab space.
+"""
+
+# Loop from 1 to 10
+for i in range(1, 11):
+    print(i, end="\t")
+
+
+
+"""
+Program 5:
+Print all even numbers between 23 and 57.
+Each number should be printed in a new line.
+"""
+
+# Loop from 23 to 57
+for i in range(23, 58):
+
+    # Check whether the number is even
+    if i % 2 == 0:
+        print(i
+
+
+"""
+Program 6:
+Write a program to check whether
+a given number is Prime or Not.
+"""
+
+# Taking input
+num = int(input("Enter a number: "))
+
+# Numbers less than 2 are not prime
+if num < 2:
+    print("Not Prime")
+else:
+    is_prime = True
+
+    # Check divisibility
+    for i in range(2, int(num ** 0.5) + 1):
+
+        if num % i == 0:
+            is_prime = False
+            break
+
+    if is_prime:
+        print("Prime")
+    else:
+        print("Not Prime")
+
+
+
+"""
+Program 7:
+Print all prime numbers between 10 and 99.
+"""
+
+# Loop through numbers from 10 to 99
+for num in range(10, 100):
+
+    is_prime = True
+
+    # Check if current number is prime
+    for i in range(2, int(num ** 0.5) + 1):
+
+        if num % i == 0:
+            is_prime = False
+            break
+
+    if is_prime:
+        print(num)
+
+
+
+"""
+Program 8:
+Find the sum of all digits
+of a g"iven number.
+"""
+
+# Taking input
+num = int(input("Enter a number: "))
+
+sum_digits = 0
+
+# Calculate sum of digits
+while num > 0:
+
+    digit = num % 10
+    sum_digits += digit
+    num //= 10
+
+print("Sum of digits =", sum_digits)
+
+
+
+"""
+Program 9:
+Reverse a given number.
+"""
+
+# Taking input
+num = int(input("Enter a number: "))
+
+original = num
+reverse = 0
+
+# Reverse the digits
+while num > 0:
+
+    digit = num % 10
+    reverse = reverse * 10 + digit
+    num //= 10
+
+print("Reversed Number =", reverse)
+
+
+"""
+Program 10:
+Check whether a given number
+is a palindrome.
+"""
+
+# Taking input
+num = int(input("Enter a number: "))
+
+original = num
+reverse = 0
+
+# Reverse the number
+while num > 0:
+
+    digit = num % 10
+    reverse = reverse * 10 + digit
+    num //= 10
+
+# Compare original and reversed numbers
+if original == reverse:
+    print(original, "is a Palindrome")
+else:
+    print(original, "is Not a Palindrome")
+
