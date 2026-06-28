@@ -1,0 +1,123 @@
+"""
+Program 1:
+Accept two numbers from the user and perform division.
+Handle exceptions and display an error message if required.
+"""
+
+try:
+    # Taking input from the user
+    num1 = int(input("Enter first number: "))
+    num2 = int(input("Enter second number: "))
+
+    # Performing division
+    result = num1 / num2
+
+    print("Result =", result)
+
+# Handles division by zero
+except ZeroDivisionError:
+    print("Error: Division by zero is not allowed.")
+
+# Handles invalid input
+except ValueError:
+    print("Error: Please enter valid integer numbers.")
+
+# Handles any other unexpected exception
+except Exception as e:
+    print("Error:", e)
+
+
+
+"""
+Program 2:
+Check whether a number is prime or not.
+Handle invalid input using exception handling.
+"""
+
+try:
+    # Taking input
+    number = int(input("Enter a number: "))
+
+    if number < 2:
+        print(number, "is Not a Prime Number")
+
+    else:
+        is_prime = True
+
+        for i in range(2, int(number ** 0.5) + 1):
+
+            if number % i == 0:
+                is_prime = False
+                break
+
+        if is_prime:
+            print(number, "is a Prime Number")
+        else:
+            print(number, "is Not a Prime Number")
+
+except ValueError:
+    print("Error: Please enter a valid integer.")
+
+
+
+"""
+Program 3:
+Read a file and display its contents
+in Title Case.
+"""
+
+try:
+    # Taking file name from user
+    filename = input("Enter file name: ")
+
+    # Opening the file
+    file = open(filename, "r")
+
+    # Reading file contents
+    content = file.read()
+
+    # Printing in title case
+    print(content.title())
+
+    # Closing file
+    file.close()
+
+except FileNotFoundError:
+    print("Error: File does not exist.")
+
+except Exception as e:
+    print("Error:", e)
+
+
+
+"""
+Program 4:
+Check whether the number at a given
+index is positive or negative.
+Handle invalid index exception.
+"""
+
+# List containing 10 integers
+numbers = [10, -20, 35, -40, 55, -60, 70, -80, 90, -100]
+
+try:
+    # Taking index from user
+    index = int(input("Enter index (0-9): "))
+
+    # Accessing element
+    value = numbers[index]
+
+    if value >= 0:
+        print(value, "is Positive")
+    else:
+        print(value, "is Negative")
+
+except IndexError:
+    print("Error: Invalid index.")
+
+except ValueError:
+    print("Error: Please enter a valid integer.")
+
+except Exception as e:
+    print("Error:", e)
+
