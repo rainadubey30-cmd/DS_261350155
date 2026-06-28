@@ -119,4 +119,181 @@ print("Number of times Alex appears:", count)
 
 MINI PROJECT FOR (FUNCTION/MODULES/PACKAGES)
 
+PROJECT 1:- (FUNCTIONS)
+
+
+# Function to sort hyphen-separated colors
+def sort_colors(colors):
+    color_list = colors.split("-")      # Split into a list
+    color_list.sort()                   # Sort alphabetically
+    return "-".join(color_list)         # Join back with hyphen
+
+# Input from user
+colors = input("Enter hyphen-separated colors: ")
+
+# Display result
+print(sort_colors(colors))
+
+
+
+PROJECT 2:- (MODULES)
+
+
+ FILE 1 mymodule.py
+
+# Function to check palindrome
+def ispalindrome(name):
+    s = name.replace(" ", "").lower()
+    if s == s[::-1]:
+        print("Yes it is a palindrome.")
+    else:
+        print("No it is not a palindrome.")
+
+# Function to count vowels
+def count_the_vowels(name):
+    vowels = "aeiouAEIOU"
+    count = 0
+    for ch in name:
+        if ch in vowels:
+            count += 1
+    print("No of vowels:", count)
+
+# Function to find frequency of letters
+def frequency_of_letters(name):
+    freq = {}
+    for ch in name:
+        if ch != " ":
+            freq[ch] = freq.get(ch, 0) + 1
+
+    print("Frequency of letters:", end=" ")
+    for key, value in freq.items():
+        print(f"{key}-{value}", end=", ")
+
+FILE 2 main.py
+
+import mymodule
+
+name = input("Enter a name: ")
+
+mymodule.ispalindrome(name)
+mymodule.count_the_vowels(name)
+mymodule.frequency_of_letters(name)
+
+MINI PROJECT FOR (COMMAND LINE ARGUNMENT)
+
+PROJECT 1:- (COMMAND LINE ARGUNMENT)
+
+import sys
+
+like = sys.argv[1].split("-")
+dislike = sys.argv[2].split("-")
+numbers = sys.argv[3].split("-")
+
+happiness = 0
+
+for num in numbers:
+    if num in like:
+        happiness += 1
+    elif num in dislike:
+        happiness -= 1
+
+print(happiness)
+
+
+MINI PROJECT FOR (I/O OPERATIONS)
+
+PROJECT 1:-
+
+
+# Read the file name
+filename = input("Enter file name: ")
+
+# Open the file
+with open(filename, "r") as file:
+    lines = file.readlines()
+
+# Count number of lines
+line_count = len(lines)
+
+# Calculate meeting time
+if line_count <= 12:
+    meeting_time = f"{line_count} AM"
+else:
+    meeting_time = f"{line_count - 12} PM"
+
+# Count word frequency
+freq = {}
+
+for line in lines:
+    words = line.split()
+    for word in words:
+        # Remove punctuation and convert to lowercase
+        word = word.strip(".,!?;:()\"'").lower()
+        if word:
+            freq[word] = freq.get(word, 0) + 1
+
+# Find the most frequent word
+place = max(freq, key=freq.get)
+
+# Display result
+print("Meeting time:", meeting_time)
+print("Meeting place:", place.capitalize(), "Street")
+
+
+
+MINI PROJECT FOR (EXCEPTIONAL HANDLING)
+
+PROJECT 1 :- 
+
+try:
+    filename = input("Enter the file name: ")
+
+    if not filename.endswith(".txt"):
+        filename += ".txt"
+
+    f = open(filename, "r")
+
+    purchased = 0
+    free_items = 0
+    amount = 0
+    discount = 0
+
+    for line in f:
+        line = line.strip()
+
+        if line == "":
+            continue
+
+        data = line.split()
+
+        if data[0].lower() == "discount":
+            discount = int(data[1])
+
+        else:
+            price = data[1]
+
+            if price.lower() == "free":
+                free_items += 1
+            else:
+                purchased += 1
+                amount += int(price)
+
+    f.close()
+
+    print("No of items purchased:", purchased)
+    print("No of free items:", free_items)
+    print("Amount to pay:", amount)
+    print("Discount given:", discount)
+    print("Final amount paid:", amount - discount)
+
+except FileNotFoundError:
+    print("File not found.")
+
+except ValueError:
+    print("Invalid data in file.")
+
+except Exception as e:
+    print("Error:", e)
+
+
 
