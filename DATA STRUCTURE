@@ -38,4 +38,541 @@ result.update(dic3)
 print("Combined Dictionary:")
 print(result)
 
+"""
+Program 3:
+Check whether a given key
+exists in a dictionary.
+"""
+
+# Creating a sample dictionary
+student = {
+    101: "Rahul",
+    102: "Amit",
+    103: "Priya"
+}
+
+# Taking key as input
+key = int(input("Enter key to search: "))
+
+# Checking key
+if key in student:
+    print("Key exists in the dictionary.")
+else:
+    print("Key does not exist.")
+
+
+
+
+"""
+Program 4:
+Print keys, values,
+and key-value pairs.
+"""
+
+# Creating a dictionary
+student = {
+    "Name": "Sakshat",
+    "Age": 20,
+    "Course": "CSE"
+}
+
+# Printing keys
+print("Keys:")
+for key in student.keys():
+    print(key)
+
+# Printing values
+print("\nValues:")
+for value in student.values():
+    print(value)
+
+# Printing both keys and values
+print("\nKey : Value")
+for key, value in student.items():
+    print(key, ":", value)
+
+
+"""
+Program 5:
+Create a dictionary where
+keys are numbers from 1 to 15
+and values are their squares.
+"""
+
+# Creating an empty dictionary
+square = {}
+
+# Using loop
+for i in range(1, 16):
+    square[i] = i ** 2
+
+print(square)
+
+
+
+"""
+Program 6:
+Find the sum of all values
+in a dictionary.
+"""
+"
+# Creating a dictionary
+marks = {
+    "Math": 90,
+    "Science": 85,
+    "English": 88,
+    "Computer": 95
+}
+
+# Calculating sum
+total = sum(marks.values())
+
+print("Dictionary:", marks)
+print("Sum of all values =", total)
+
+ASSIGNMENT  OUESTION FOR (LIST)
+
+"""
+Program 1:
+Create a list of 5 integers and display the list items.
+Access individual elements using index.
+"""
+
+# Creating a list of 5 integers
+numbers = [10, 20, 30, 40, 50]
+
+# Display the complete list
+print("Complete List:", numbers)
+
+# Accessing elements using index
+print("\nAccessing Individual Elements:")
+
+print("Element at index 0:", numbers[0])
+print("Element at index 1:", numbers[1])
+print("Element at index 2:", numbers[2])
+print("Element at index 3:", numbers[3])
+print("Element at index 4:", numbers[4])
+
+
+"""
+Program 2:
+Append a new item to the end of the list.
+"""
+
+# Creating a list
+numbers = [10, 20, 30, 40]
+
+print("Original List:", numbers)
+
+# Appending a new element
+numbers.append(50)
+
+print("Updated List:", numbers)
+
+
+"""
+Program 3:
+Reverse the order of the items in the list.
+"""
+
+# Creating a list
+numbers = [10, 20, 30, 40, 50]
+
+print("Original List:", numbers)
+
+# Reverse the list
+numbers.reverse()
+
+print("Reversed List:", numbers)
+
+
+"""
+Program 4:
+Print the number of occurrences
+of a specified element in a list.
+"""
+
+# Creating a list
+numbers = [10, 20, 30, 20, 40, 20, 50]
+
+print("List:", numbers)
+
+# Taking element as input
+element = int(input("Enter element to count: "))
+
+# Counting occurrences
+count = numbers.count(element)
+
+print("Occurrences of", element, "=", count)
+
+
+"""
+Program 5:
+Append the items of list1
+to the front of list2.
+"""
+
+# Creating two lists
+list1 = [1, 2, 3]
+list2 = [4, 5, 6]
+
+print("List1:", list1)
+print("List2:", list2)
+
+# Adding list1 before list2
+result = list1 + list2
+
+print("Updated List:", result)
+
+
+"""
+Program 6:
+Insert a new item before
+the second element in a list.
+"""
+
+# Creating a list
+numbers = [10, 30, 40, 50]
+
+print("Original List:", numbers)
+
+# Insert 20 before second element
+numbers.insert(1, 20)
+
+print("Updated List:", numbers)
+
+
+"""
+Program 7:
+Remove the item from
+a specified index.
+"""
+
+# Creating a list
+numbers = [10, 20, 30, 40, 50]
+
+print("Original List:", numbers)
+
+# Taking index from user
+index = int(input("Enter index to remove: "))
+
+# Check if index is valid
+if 0 <= index < len(numbers):
+    removed = numbers.pop(index)
+    print("Removed Element:", removed)
+    print("Updated List:", numbers)
+else:
+    print("Invalid Index")
+
+
+"""
+Program 8:
+Remove the first occurrence
+of a specified element.
+"""
+
+# Creating a list
+numbers = [10, 20, 30, 20, 40, 20]
+
+print("Original List:", numbers)
+
+# Taking element from user
+element = int(input("Enter element to remove: "))
+
+# Check if element exists
+if element in numbers:
+    numbers.remove(element)
+    print("Updated List:", numbers)
+else:
+    print("Element not found in the list.")
+
+
+ASSINGMENT QUESTION FOR (SET)
+
+"""
+Program 1:
+Remove a given item from a set.
+"""
+
+# Creating a sample set
+numbers = {10, 20, 30, 40, 50}
+
+print("Original Set:", numbers)
+
+# Taking input from the user
+item = int(input("Enter the item to remove: "))
+
+# Check if the item exists before removing
+if item in numbers:
+    numbers.remove(item)
+    print("Updated Set:", numbers)
+else:
+    print("Item not found in the set.")
+
+"""
+Program 2:
+Create an intersection of two sets.
+"""
+
+# Creating two sample sets
+set1 = {10, 20, 30, 40, 50}
+set2 = {30, 40, 50, 60, 70}
+
+print("Set 1:", set1)
+print("Set 2:", set2)
+
+# Finding common elements
+intersection_set = set1.intersection(set2)
+
+print("Intersection of the sets:", intersection_set)
+
+
+"""
+Program 3:
+Create a union of two sets.
+"""
+
+# Creating two sample sets
+set1 = {10, 20, 30}
+set2 = {30, 40, 50}
+
+print("Set 1:", set1)
+print("Set 2:", set2)
+
+# Combining both sets
+union_set = set1.union(set2)
+
+print("Union of the sets:", union_set)
+
+"""
+Program 4:
+Find the maximum and minimum value in a set.
+"""
+
+# Creating a sample set
+numbers = {45, 12, 78, 23, 56, 89, 10}
+
+print("Set:", numbers)
+
+# Finding the maximum and minimum values
+maximum = max(numbers)
+minimum = min(numbers)
+
+print("Maximum Value:", maximum)
+print("Minimum Value:", minimum)
+
+
+ASSIGNMENT QUESTION FOR (STRING)
+
+"""
+Program 1:
+Count the number of uppercase
+and lowercase letters in a string.
+"""
+
+# Taking input from the user
+text = input("Enter a string: ")
+
+# Variables to store counts
+upper_count = 0
+lower_count = 0
+
+# Traversing each character in the string
+for ch in text:
+
+    # Check for uppercase letter
+    if ch.isupper():
+        upper_count += 1
+
+    # Check for lowercase letter
+    elif ch.islower():
+        lower_count += 1
+
+# Displaying the result
+print("Uppercase Letters:", upper_count)
+print("Lowercase Letters:", lower_count)
+
+
+"""
+Program 2:
+Check whether a given string
+is a palindrome.
+"""
+
+# Taking input
+text = input("Enter a string: ")
+
+# Reverse the string
+reverse = text[::-1]
+
+# Compare original and reversed strings
+if text == reverse:
+    print("Palindrome")
+else:
+    print("Not a Palindrome")
+
+
+"""
+Program 3:
+Return a new string made of n copies
+of the first two characters.
+"""
+
+# Taking input
+text = input("Enter a string: ")
+
+# First two characters
+first_two = text[:2]
+
+# Length of the string
+length = len(text)
+
+# Repeat first two characters
+result = first_two * length
+
+print("Output:", result)
+
+
+
+"""
+Program 4:
+Remove 'x' from the beginning
+and end of a string.
+"""
+
+# Taking input
+text = input("Enter a string: ")
+
+# Remove first character if it is 'x'
+if text.startswith("x"):
+    text = text[1:]
+
+# Remove last character if it is 'x'
+if text.endswith("x"):
+    text = text[:-1]
+
+print("Output:", text)
+
+
+"""
+Program 5:
+Return a string made of n repetitions
+of the last n characters.
+"""
+
+# Taking input
+text = input("Enter a string: ")
+
+# Taking n as input
+n = int(input("Enter value of n: "))
+
+# Last n characters
+last_part = text[-n:]
+
+# Repeat last part n times
+result = last_part * n
+
+print("Output:", result)
+
+
+
+ASSIGNMENT QUESTION FOR (TUPLE)
+
+"""
+Program 1:
+Print the 4th element from the beginning
+and the 4th element from the end of a tuple.
+"""
+
+# Creating a sample tuple
+numbers = (10, 20, 30, 40, 50, 60, 70, 80)
+
+# Accessing the 4th element (index starts from 0)
+print("4th element from the beginning:", numbers[3])
+
+# Accessing the 4th element from the end
+print("4th element from the end:", numbers[-4])
+
+
+"""
+Program 2:
+Check whether an element
+exists in a tuple.
+"""
+
+# Creating a sample tuple
+numbers = (10, 20, 30, 40, 50)
+
+# Taking input from the user
+element = int(input("Enter element to search: "))
+
+# Checking whether the element exists
+if element in numbers:
+    print("Element exists in the tuple.")
+else:
+    print("Element does not exist in the tuple.")
+
+
+"""
+Program 3:
+Convert a list into a tuple.
+"""
+
+# Creating a list
+numbers = [10, 20, 30, 40, 50]
+
+print("Original List:", numbers)
+
+# Converting list into tuple
+tuple_numbers = tuple(numbers)
+
+print("Converted Tuple:", tuple_numbers)
+
+
+"""
+Program 4:
+Find the index of an item in a tuple.
+"""
+
+# Creating a sample tuple
+fruits = ("Apple", "Banana", "Mango", "Orange", "Grapes")
+
+# Taking input from the user
+item = input("Enter the fruit name: ")
+
+# Checking whether the item exists
+if item in fruits:
+    print("Index of", item, "is", fruits.index(item))
+else:
+    print("Item not found in the tuple.")
+
+"""
+Program 5:
+Replace the last value of each tuple
+in a list with 100.
+"""
+
+# Creating a list of tuples
+sample_list = [(10, 20, 40), (40, 50, 60), (70, 80, 90)]
+
+print("Original List:")
+print(sample_list)
+
+# Creating a new list
+updated_list = []
+
+# Replacing the last element of every tuple
+for item in sample_list:
+
+    # Keep the first two elements and replace the last with 100
+    new_tuple = item[:-1] + (100,)
+    updated_list.append(new_tuple)
+
+print("\nUpdated List:")
+print(updated_list)
+
+
+
+
+
 
